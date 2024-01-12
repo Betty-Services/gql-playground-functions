@@ -1,0 +1,80 @@
+{
+  "description": "Executes a query in the GraphQL playground of the desired app. Tip: Use the 'Generate Query' action to easily generate a query." ,
+  "label": "Execute Query",
+  "category": "GraphQL",
+  "icon": {
+    "name": "ActionsIcon",
+    "color": "Orange"
+  },
+  "options": [
+    {
+      "name": "appIdentifier",
+      "label": "App Identifier",
+      "configuration": {
+        "placeholder": "my-app"
+      },
+      "info": "The identifier of the app to execute the query in. You can find the identifier in the app settings.",
+      "meta": {
+        "type": "Text",
+        "validations": {
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "appUuid",
+      "label": "App UUID",
+      "configuration": {
+        "placeholder": "1d1b1c1d1e1f1g1h1i1j1k1l1m1n1o1p"
+      },
+      "info": "The UUID of the app to execute the query in. You can find the UUID in the app settings.",
+      "meta": {
+        "type": "Text",
+        "validations": {
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "query",
+      "label": "Query",
+      "configuration": {
+        "placeholder": "query { ... }"
+      },
+      "info": "The query to execute. You can use the 'Generate Query' action to easily generate a query.",
+      "meta": {
+        "allowedKinds": [
+          "JSON"
+        ],
+        "type": "Value",
+        "validations": {
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "headers",
+      "label": "Headers",
+      "meta": {
+        "type": "Map"
+      },
+      "info": "The headers to send with the request. You can use this to authenticate with the GraphQL playground."
+    },
+    {
+      "name": "result",
+      "label": "Output",
+      "info": "The output of the query.",
+      "meta": {
+        "type": "Output",
+        "output": {
+          "type": "JSON"
+        }
+      },
+      "configuration": {
+        "placeholder": "result"
+      }
+
+    }
+  ],
+  "yields": "NONE"
+}

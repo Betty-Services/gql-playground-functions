@@ -1,0 +1,5 @@
+{
+  "dependencies": [],
+  "functions": ["generateQuery 1.0", "executeQuery 1.0"],
+  "includes": []
+}

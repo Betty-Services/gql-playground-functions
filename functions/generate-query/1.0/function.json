@@ -1,0 +1,53 @@
+{
+  "description": "Description",
+  "label": "Generate Query",
+  "category": "GraphQL",
+  "icon": {
+    "name": "ActionsIcon",
+    "color": "Orange"
+  },
+  "options": [
+    {
+      "label": "GraphQL Query",
+      "info": "GraphQL Query. You can copy this from the GraphQL Playground Docs tab or when clicking on the 'Test run' button when editing an action.",
+      "name": "query",
+      "configuration": {
+        "placeholder": "query { ... }"
+      },
+      "meta": {
+        "type": "MultilineText",
+        "validations": {
+          "required": true
+        }
+      }
+    },
+    {
+      "name": "isAction",
+      "label": "Is Action query",
+      "info": "If the an action query then the input variables will be nested in an input object.",
+      "meta": {
+        "type": "Boolean"
+      }
+    },
+    {
+      "name": "variables",
+      "label": "Variables",
+      "info": "Variables to be used in the query.",
+      "meta": {
+        "type": "Map"
+      }
+    },
+    {
+      "name": "result",
+      "label": "Output",
+      "info": "Output in JSON format.",
+      "meta": {
+        "type": "Output",
+        "output": {
+          "type": "JSON"
+        }
+      }
+    }
+  ],
+  "yields": "NONE"
+}
